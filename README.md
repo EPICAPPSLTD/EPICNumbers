@@ -139,6 +139,22 @@ Class function extensions for batch operations on NSNumber arrays
 * rootOf(numbers: [NSNumber], root : NSNumber) -> [NSNumber]
 ⋅⋅⋅ modifies all NSNumbers in an array to the root specified in the method
 
+#### Usage:
+```swift
+let array1 : NSNumber = [2, 10]
+
+let array2 = NSNumber.squarePower(array1) // [4, 100]
+let array3 = NSNumber.squareRoot(array2) // [2, 10]
+let array4 = NSNumber.isNumberType(array1) // true
+let num1 = NSNumber.sum(array1) // 12
+let num2 = NSNumber.average(array1) // 6
+let num3 = NSNumber.maximum(array1) // 10
+let num4 = NSNumber.minimum(array1) // 2
+let array5 = NSNumber.limit(array1, minimum: 3, maximum: 9) // [3, 9]
+let array6 = NSNumber.powerOf(array1, 2) // [4, 100]
+let array7 = NSNumber.rootOf(array6, 2) // [2, 10]
+```
+
 function extensions for operations on NSNumbers
 ------
 * squarePower : NSNumber 
@@ -158,7 +174,25 @@ function extensions for operations on NSNumbers
 * rootOf(number : NSNumber) -> NSNumber
 ⋅⋅⋅ returns the NSNumber to the root specified in the method
 
+#### Usage:
+```swift
+let num1 : NSNumber = 10
+
+let num2 = num1.squarePower // 100
+let num3 = num2.squareRoot // 10
+let num4 = num1.isNumberType // true
+let num5 = num1.maximum(102) // 102
+let num6 = num1.minimum(5) // 5
+let num7 = num1.limit(0, maximum: 5) // 5
+let num8 = num1.powerOf(2) // 100
+let num9 = num8.rootOf(2) // 10
+```
+
 This class serves as an extension to the tutorial of the blog article: ["Smarter Numbers"](http://epic-apps.uk/2015/05/04/smarter-numbers/).
 Usage is free for all based on the attached license details, if you find this code useful, please consider [making a donation](http://epic-apps.uk/donations/).
+
+Copyright (c) EPIC 
+[www.epic-apps.uk](www.epic-apps.uk)
+
 
 
