@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -14,8 +14,8 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="XrY-gR-GPr">
                     <rect key="frame" x="128" y="100" width="223" height="280"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright (c) 2015 EPIC. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJu-c6-qRM">
-                    <rect key="frame" x="161" y="454" width="157" height="10"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="www.epic-apps.uk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJu-c6-qRM">
+                    <rect key="frame" x="206" y="454" width="67" height="10"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="464" id="USd-RX-DHz"/>
                     </constraints>
@@ -28,17 +28,41 @@
                         </mask>
                     </variation>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright (c) 2015 EPIC. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPf-1t-Zhe">
+                    <rect key="frame" x="161" y="436" width="157" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="464" id="H7q-rk-4U0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="8"/>
+                    <color key="textColor" red="0.47843140360000003" green="0.47843134399999998" blue="0.47843134399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="H7q-rk-4U0"/>
+                        </mask>
+                    </variation>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="centerY" secondItem="XrY-gR-GPr" secondAttribute="centerY" id="36M-Ej-LK7"/>
                 <constraint firstAttribute="trailing" secondItem="yJu-c6-qRM" secondAttribute="trailing" constant="8" id="3vi-IJ-f66"/>
                 <constraint firstItem="yJu-c6-qRM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="6hw-cw-Q93"/>
+                <constraint firstAttribute="centerX" secondItem="yJu-c6-qRM" secondAttribute="centerX" constant="0.5" id="9lq-a7-LJe"/>
+                <constraint firstAttribute="bottom" secondItem="yJu-c6-qRM" secondAttribute="bottom" constant="16" id="AGH-4w-miT"/>
                 <constraint firstItem="yJu-c6-qRM" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="HQR-id-cuX"/>
+                <constraint firstItem="cPf-1t-Zhe" firstAttribute="centerY" secondItem="yJu-c6-qRM" secondAttribute="centerY" constant="-18" id="HgG-iI-3bj"/>
+                <constraint firstItem="yJu-c6-qRM" firstAttribute="top" secondItem="cPf-1t-Zhe" secondAttribute="bottom" constant="8" id="XPG-Ld-WvO"/>
                 <constraint firstItem="yJu-c6-qRM" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottomMargin" id="YrC-Y7-POA"/>
                 <constraint firstItem="yJu-c6-qRM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="dOU-gq-uFQ"/>
+                <constraint firstItem="cPf-1t-Zhe" firstAttribute="width" secondItem="yJu-c6-qRM" secondAttribute="width" id="dUw-QT-s2F"/>
+                <constraint firstItem="yJu-c6-qRM" firstAttribute="top" secondItem="cPf-1t-Zhe" secondAttribute="bottom" constant="8" id="eCA-x2-b35"/>
                 <constraint firstAttribute="centerX" secondItem="yJu-c6-qRM" secondAttribute="centerX" id="fNs-x7-B9p"/>
                 <constraint firstAttribute="centerY" secondItem="XrY-gR-GPr" secondAttribute="centerY" id="gZf-fi-HOi"/>
+                <constraint firstAttribute="centerX" secondItem="cPf-1t-Zhe" secondAttribute="centerX" constant="0.5" id="lCW-xO-ZPP"/>
+                <constraint firstAttribute="centerX" secondItem="XrY-gR-GPr" secondAttribute="centerX" constant="0.5" id="m6h-Om-fSd"/>
                 <constraint firstAttribute="bottom" secondItem="yJu-c6-qRM" secondAttribute="bottom" constant="16" id="mSY-HV-r8N"/>
+                <constraint firstAttribute="centerX" secondItem="cPf-1t-Zhe" secondAttribute="centerX" constant="0.5" id="rZ5-c7-QOP"/>
                 <constraint firstAttribute="centerX" secondItem="XrY-gR-GPr" secondAttribute="centerX" id="sgC-rM-De9"/>
                 <constraint firstItem="yJu-c6-qRM" firstAttribute="top" secondItem="XrY-gR-GPr" secondAttribute="bottom" constant="71" id="w1F-DM-qPe"/>
             </constraints>
@@ -46,11 +70,19 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="gZf-fi-HOi"/>
+                    <exclude reference="sgC-rM-De9"/>
+                    <exclude reference="HgG-iI-3bj"/>
+                    <exclude reference="dUw-QT-s2F"/>
+                    <exclude reference="rZ5-c7-QOP"/>
                     <exclude reference="3vi-IJ-f66"/>
                     <exclude reference="6hw-cw-Q93"/>
                     <exclude reference="HQR-id-cuX"/>
                     <exclude reference="YrC-Y7-POA"/>
                     <exclude reference="dOU-gq-uFQ"/>
+                    <exclude reference="eCA-x2-b35"/>
+                    <exclude reference="fNs-x7-B9p"/>
+                    <exclude reference="mSY-HV-r8N"/>
                     <exclude reference="w1F-DM-qPe"/>
                 </mask>
             </variation>
