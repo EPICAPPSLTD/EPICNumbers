@@ -158,8 +158,7 @@ function extensions for operations on NSNumbers
 * rootOf(number : NSNumber) -> NSNumber
 ⋅⋅⋅ returns the NSNumber to the root specified in the method
 
-This class serves as an extension to the tutorial of the blog article: ["Smarter Numbers"][1].
-Usage is free for all based on the attached license details, if you find this code useful, please consider [making a donation][2]
+This class serves as an extension to the tutorial of the blog article: ["Smarter Numbers"](http://epic-apps.uk/2015/05/04/smarter-numbers/).
+Usage is free for all based on the attached license details, if you find this code useful, please consider [making a donation](http://epic-apps.uk/donations/).
 
-[1][http://epic-apps.uk/2015/05/04/smarter-numbers/]
-[2][http://epic-apps.uk/donations/]
+
