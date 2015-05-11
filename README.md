@@ -158,6 +158,7 @@ let array7 = NSNumber.rootOf(array6, 2) // [2, 10]
 function extensions for operations on NSNumbers
 ------
 * squarePower : NSNumber 
+
     returns the square power of the NSNumber
 * squareRoot : NSNumber
     returns the square root of the NSNumber
