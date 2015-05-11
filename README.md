@@ -119,7 +119,9 @@ array1 != 3.0 //returns true if all numbers match the condition
 Class function extensions for batch operations on NSNumber arrays
 ------
 * squarePower(numbers: [NSNumber]) -> [NSNumber] 
+
     *modifies all NSNumbers in the array to their square power*
+
 * squareRoot(numbers: [NSNumber]) -> [NSNumber]
 
     modifies all NSNumbers in the array to their square power
