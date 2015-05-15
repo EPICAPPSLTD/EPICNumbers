@@ -120,43 +120,39 @@ Class function extensions for batch operations on NSNumber arrays
 ------
 * squarePower(numbers: [NSNumber]) -> [NSNumber] 
 
-    *modifies all NSNumbers in the array to their square power*
+⋅⋅⋅*modifies all NSNumbers in the array to their square power*
 
 * squareRoot(numbers: [NSNumber]) -> [NSNumber]
 
-    *modifies all NSNumbers in the array to their square power*
-
-* isNumberType(numbers: [NSNumber]) -> Bool
-
-    *returns true if all NSnumbers are of number type (char, bool and undefined nsnumbers are excluded)*
+⋅⋅⋅*modifies all NSNumbers in the array to their square power*
 
 * sum(numbers: [NSNumber]) -> NSNumber
 
-    *returns the sum of all NSnumbers in an array*
+⋅⋅⋅*returns the sum of all NSnumbers in an array*
 
 * average(numbers: [NSNumber]) -> NSNumber
 
-    *returns the average of all NSnumbers in an array*
+⋅⋅⋅*returns the average of all NSnumbers in an array*
 
 * maximum(numbers: [NSNumber]) -> NSNumber
 
-    *returns the NSNumber with the maximum value in the array*
+⋅⋅⋅*returns the NSNumber with the maximum value in the array*
 
 * minimum(numbers: [NSNumber]) -> NSNumber
 
-    *returns the NSNumber with the minimum value in the array*
+⋅⋅⋅*returns the NSNumber with the minimum value in the array*
 
 * limit(numbers: [NSNumber], minimum : NSNumber, maximum : NSNumber) -> [NSNumber]
 
-    *limits all NSNumbers in an array to the lower and upper limits defined in the method*
+⋅⋅⋅*limits all NSNumbers in an array to the lower and upper limits defined in the method*
 
 * powerOf(numbers: [NSNumber], power : NSNumber) -> [NSNumber]
 
-    *modifies all NSNumbers in an array to the power specified in the method*
+⋅⋅⋅*modifies all NSNumbers in an array to the power specified in the method*
 
 * rootOf(numbers: [NSNumber], root : NSNumber) -> [NSNumber]
 
-    *modifies all NSNumbers in an array to the root specified in the method*
+⋅⋅⋅*modifies all NSNumbers in an array to the root specified in the method*
 
 #### Usage:
 ```swift
@@ -164,7 +160,6 @@ let array1 : NSNumber = [2, 10]
 
 let array2 = NSNumber.squarePower(array1) // [4, 100]
 let array3 = NSNumber.squareRoot(array2) // [2, 10]
-let array4 = NSNumber.isNumberType(array1) // true
 let num1 = NSNumber.sum(array1) // 12
 let num2 = NSNumber.average(array1) // 6
 let num3 = NSNumber.maximum(array1) // 10
@@ -178,35 +173,31 @@ function extensions for operations on NSNumbers
 ------
 * squarePower : NSNumber 
 
-    *returns the square power of the NSNumber*
+⋅⋅⋅*returns the square power of the NSNumber*
 
 * squareRoot : NSNumber
 
-    *returns the square root of the NSNumber*
-
-* isNumberType(numbers: [NSNumber]) -> Bool
-
-    *returns true if NSnumber is of number type (char, bool and undefined NSNumbers are excluded)*
+⋅⋅⋅*returns the square root of the NSNumber*
 
 * maximum(number : NSNumber) -> NSNumber
 
-    *returns the NSNumber with the highest value of two NSNumbers*
+⋅⋅⋅*returns the NSNumber with the highest value of two NSNumbers*
 
 * minimum(number : NSNumber) -> NSNumber
 
-    *returns the NSNumber with the lowest value of two NSNumbers*
+⋅⋅⋅*returns the NSNumber with the lowest value of two NSNumbers*
 
 * limit(#minimum : NSNumber, maximum : NSNumber) -> NSNumber
 
-    *limits an NSNumbers to the lower and upper limits defined in the method*
+⋅⋅⋅*limits an NSNumbers to the lower and upper limits defined in the method*
 
 * powerOf(number : NSNumber) -> NSNumber
 
-    *returns the NSNumber to the power specified in the method*
+⋅⋅⋅*returns the NSNumber to the power specified in the method*
 
 * rootOf(number : NSNumber) -> NSNumber
 
-    *returns the NSNumber to the root specified in the method*
+⋅⋅⋅*returns the NSNumber to the root specified in the method*
 
 #### Usage:
 ```swift
@@ -214,7 +205,6 @@ let num1 : NSNumber = 10
 
 let num2 = num1.squarePower // 100
 let num3 = num2.squareRoot // 10
-let num4 = num1.isNumberType // true
 let num5 = num1.maximum(102) // 102
 let num6 = num1.minimum(5) // 5
 let num7 = num1.limit(0, maximum: 5) // 5

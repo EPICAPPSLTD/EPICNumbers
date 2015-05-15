@@ -236,15 +236,7 @@ class NSNumberExtensionsTests: XCTestCase {
         XCTAssertEqual(numbers[1], 4, "class square root calculation is incorrect")
         XCTAssertEqual(numbers[2], 6, "class square root calculation is incorrect")
     }
-    
-    func testClassIsNumberType() {
-        var numbers : [NSNumber] = [number_unsignedInt, number_longLong, number_integer]
-        var notNumbers : [NSNumber] = [number_double, number_floatLiteral, number_char]
-        
-        XCTAssertTrue(NSNumber.isNumberType(numbers), "should be true")
-        XCTAssertFalse(NSNumber.isNumberType(notNumbers), "should be false")
-    }
-    
+
     func testClassSum() {
         let numbers : [NSNumber] = [2, 4, 6.5]
         let sum = NSNumber.sum(numbers)
@@ -318,29 +310,6 @@ class NSNumberExtensionsTests: XCTestCase {
         
         number = number.squareRoot
         XCTAssertEqual(number, 2, "square root calculation is incorrect")
-    }
-
-    func testIsNumberType() {
-        //not numbers
-        XCTAssert(!number_empty.isNumberType, "this should not be considered a number")
-        XCTAssert(!number_boolean.isNumberType, "this should not be considered a number")
-        XCTAssert(!number_booleanLiteral.isNumberType, "this should not be considered a number")
-        XCTAssert(!number_char.isNumberType, "this should not be considered a number")
-        
-        //numbers
-        XCTAssert(number_double.isNumberType, "this should be considered a number")
-        XCTAssert(number_float.isNumberType, "this should be considered a number")
-        XCTAssert(number_floatLiteral.isNumberType, "this should be considered a number")
-        XCTAssert(number_int.isNumberType, "this should be considered a number")
-        XCTAssert(number_integer.isNumberType, "this should be considered a number")
-        XCTAssert(number_integerLiteral.isNumberType, "this should be considered a number")
-        XCTAssert(number_long.isNumberType, "this should be considered a number")
-        XCTAssert(number_longLong.isNumberType, "this should be considered a number")
-        XCTAssert(number_short.isNumberType, "this should be considered a number")
-        XCTAssert(number_unsignedShort.isNumberType, "this should be considered a number")
-        XCTAssert(number_unsignedInt.isNumberType, "this should be considered a number")
-        XCTAssert(number_unsignedLong.isNumberType, "this should be considered a number")
-        XCTAssert(number_unsignedLongLong.isNumberType, "this should be considered a number")
     }
     
     func testMaximum() {
