@@ -83,6 +83,7 @@ Operator overloads for object comparison
 * > (greater than)
 * <= (less equal than)
 * >= (greater equal than)
+* == (equals, integrated for compliance with Equatable and Comparable protocols) 
 
 #### Usage:
 ```swift
@@ -93,6 +94,7 @@ num1 < num2 //returns true
 num1 > num2 //returns false
 num1 <= num2 //returns true
 num1 >= num2 //returns false
+num1 == num2 //returns false
 ```
 
 Operator overloads for batch object comparison on NSNumber arrays

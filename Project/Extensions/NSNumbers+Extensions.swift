@@ -128,22 +128,26 @@ postfix func -- (inout numbers:[NSNumber]) -> [NSNumber] {
 }
 
 //MARK: - comparisons
-func < (left:NSNumber, right:NSNumber) -> Bool {
+public func < (left:NSNumber, right:NSNumber) -> Bool {
     return left.compare(right) == NSComparisonResult.OrderedAscending
 }
 
-func > (left:NSNumber, right:NSNumber) -> Bool {
+public func > (left:NSNumber, right:NSNumber) -> Bool {
     return left.compare(right) == NSComparisonResult.OrderedDescending
 }
 
-func <= (left:NSNumber, right:NSNumber) -> Bool {
+public func <= (left:NSNumber, right:NSNumber) -> Bool {
     let result = left.compare(right)
     return result == NSComparisonResult.OrderedAscending || result == NSComparisonResult.OrderedSame
 }
 
-func >= (left:NSNumber, right:NSNumber) -> Bool {
+public func >= (left:NSNumber, right:NSNumber) -> Bool {
     let result = left.compare(right)
     return result == NSComparisonResult.OrderedDescending || result == NSComparisonResult.OrderedSame
+}
+
+public func == (left:NSNumber, right:NSNumber) -> Bool {
+    return left.hashValue == right.hashValue
 }
 
 //MARK: - batch comparisons
@@ -187,7 +191,7 @@ func != (left:[NSNumber], right:NSNumber) -> Bool {
 private let booleanNumber : NSNumber = true
 
 //MARK: - class extensions
-extension NSNumber {
+extension NSNumber : Comparable, Equatable {
     
     //MARK: - class functions
     /**

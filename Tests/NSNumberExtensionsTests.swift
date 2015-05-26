@@ -183,7 +183,13 @@ class NSNumberExtensionsTests: XCTestCase {
         XCTAssertFalse(number_boolean <= number_booleanLiteral, "should be false")
         XCTAssertFalse(number_unsignedChar <= number_char, "should be false")
         XCTAssertFalse(number_unsignedShort <= number_short, "should be false")
-        XCTAssertTrue( number_unsignedShort <= number_unsignedShort, "should be true")
+        XCTAssertTrue(number_unsignedShort <= number_unsignedShort, "should be true")
+        
+        XCTAssertTrue(number_unsignedShort == number_unsignedShort, "should be true")
+        XCTAssertTrue(number_unsignedShort != number_short, "should be true")
+        XCTAssertFalse(number_unsignedShort == number_short, "should be true")
+        XCTAssertFalse(number_unsignedShort != number_unsignedShort, "should be true")
+
     }
     
     func testBatchComparisons() {
