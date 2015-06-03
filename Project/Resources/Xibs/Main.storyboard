@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -22,74 +21,26 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="www.epic-apps.uk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIv-Z1-E2S">
                                 <rect key="frame" x="266" y="574" width="67" height="10"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="464" id="K2m-l2-jzP"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="8"/>
                                 <color key="textColor" red="0.47843140360000003" green="0.47843134399999998" blue="0.47843134399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="K2m-l2-jzP"/>
-                                    </mask>
-                                </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Copyright (c) 2015 EPIC. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dN-Qp-cWi">
-                                <rect key="frame" x="221" y="556" width="157" height="10"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="464" id="4bJ-4z-rwL"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright (c) 2015 EPIC. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dN-Qp-cWi">
+                                <rect key="frame" x="221" y="557" width="157" height="10"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="8"/>
                                 <color key="textColor" red="0.47843140360000003" green="0.47843134399999998" blue="0.47843134399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="4bJ-4z-rwL"/>
-                                    </mask>
-                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NIv-Z1-E2S" firstAttribute="bottom" secondItem="x40-0e-kVo" secondAttribute="bottomMargin" id="14K-BN-Bo5"/>
                             <constraint firstAttribute="centerX" secondItem="uf5-jb-ckc" secondAttribute="centerX" constant="0.5" id="3nj-h9-wdd"/>
-                            <constraint firstItem="7dN-Qp-cWi" firstAttribute="centerY" secondItem="NIv-Z1-E2S" secondAttribute="centerY" constant="-18" id="6iq-vt-A9o"/>
-                            <constraint firstItem="NIv-Z1-E2S" firstAttribute="top" secondItem="uf5-jb-ckc" secondAttribute="bottom" constant="71" id="8sx-Ec-asr"/>
-                            <constraint firstAttribute="centerX" secondItem="uf5-jb-ckc" secondAttribute="centerX" id="ATT-Yy-VGL"/>
-                            <constraint firstAttribute="centerX" secondItem="7dN-Qp-cWi" secondAttribute="centerX" constant="0.5" id="IdZ-oz-HjX"/>
-                            <constraint firstItem="NIv-Z1-E2S" firstAttribute="leading" secondItem="x40-0e-kVo" secondAttribute="leadingMargin" id="KkQ-Yy-j6g"/>
                             <constraint firstAttribute="centerX" secondItem="7dN-Qp-cWi" secondAttribute="centerX" constant="0.5" id="Pds-VX-M8O"/>
                             <constraint firstAttribute="centerY" secondItem="uf5-jb-ckc" secondAttribute="centerY" id="SJP-5a-fo4"/>
-                            <constraint firstItem="7dN-Qp-cWi" firstAttribute="width" secondItem="NIv-Z1-E2S" secondAttribute="width" id="WQ7-wx-APu"/>
-                            <constraint firstAttribute="trailing" secondItem="NIv-Z1-E2S" secondAttribute="trailing" constant="8" id="WSe-pB-Pi0"/>
-                            <constraint firstItem="NIv-Z1-E2S" firstAttribute="top" secondItem="7dN-Qp-cWi" secondAttribute="bottom" constant="8" id="atb-1J-fhc"/>
-                            <constraint firstAttribute="centerX" secondItem="NIv-Z1-E2S" secondAttribute="centerX" id="c7N-i1-lu8"/>
                             <constraint firstAttribute="centerX" secondItem="NIv-Z1-E2S" secondAttribute="centerX" constant="0.5" id="e1T-PM-YKK"/>
-                            <constraint firstItem="NIv-Z1-E2S" firstAttribute="trailing" secondItem="x40-0e-kVo" secondAttribute="trailingMargin" id="iZf-Ch-l5K"/>
                             <constraint firstItem="NIv-Z1-E2S" firstAttribute="top" secondItem="7dN-Qp-cWi" secondAttribute="bottom" constant="8" id="o2p-NE-s6V"/>
-                            <constraint firstItem="NIv-Z1-E2S" firstAttribute="leading" secondItem="x40-0e-kVo" secondAttribute="leading" constant="8" id="qdt-x1-oxl"/>
-                            <constraint firstAttribute="centerY" secondItem="uf5-jb-ckc" secondAttribute="centerY" id="xEK-R0-21g"/>
-                            <constraint firstAttribute="bottom" secondItem="NIv-Z1-E2S" secondAttribute="bottom" constant="16" id="xu0-lz-JDW"/>
                             <constraint firstAttribute="bottom" secondItem="NIv-Z1-E2S" secondAttribute="bottom" constant="16" id="yXH-Rr-1cA"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="ATT-Yy-VGL"/>
-                                <exclude reference="xEK-R0-21g"/>
-                                <exclude reference="6iq-vt-A9o"/>
-                                <exclude reference="IdZ-oz-HjX"/>
-                                <exclude reference="WQ7-wx-APu"/>
-                                <exclude reference="14K-BN-Bo5"/>
-                                <exclude reference="8sx-Ec-asr"/>
-                                <exclude reference="KkQ-Yy-j6g"/>
-                                <exclude reference="WSe-pB-Pi0"/>
-                                <exclude reference="atb-1J-fhc"/>
-                                <exclude reference="c7N-i1-lu8"/>
-                                <exclude reference="iZf-Ch-l5K"/>
-                                <exclude reference="qdt-x1-oxl"/>
-                                <exclude reference="xu0-lz-JDW"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
