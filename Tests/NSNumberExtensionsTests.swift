@@ -44,12 +44,12 @@ class NSNumberExtensionsTests: XCTestCase {
         let mod = number_int % number_int
         let mod2 = number_int % 10.5
         
-        XCTAssertEqual(add.doubleValue, 42.5, "arithmetic is incorrect")
-        XCTAssertEqual(minus.doubleValue, 21.5, "arithmetic is incorrect")
-        XCTAssertEqual(multiply.doubleValue, 336.0, "arithmetic is incorrect")
-        XCTAssertEqual(divide.doubleValue, 2.0, "arithmetic is incorrect")
-        XCTAssertEqual(mod.doubleValue, 0.0, "arithmetic is incorrect")
-        XCTAssertEqual(mod2.doubleValue, 0.5, "arithmetic is incorrect")
+        XCTAssertEqual(add.doubleValue, 42.5)
+        XCTAssertEqual(minus.doubleValue, 21.5)
+        XCTAssertEqual(multiply.doubleValue, 336.0)
+        XCTAssertEqual(divide.doubleValue, 2.0)
+        XCTAssertEqual(mod.doubleValue, 0.0)
+        XCTAssertEqual(mod2.doubleValue, 0.5)
     }
 
     func testExtendedAlgebraFunctions() {
@@ -75,15 +75,15 @@ class NSNumberExtensionsTests: XCTestCase {
         plusOne++
         minusOne--
 
-        XCTAssertEqual(add.doubleValue, 42.5, "arithmetic is incorrect")
-        XCTAssertEqual(minus.doubleValue, 21.5, "arithmetic is incorrect")
-        XCTAssertEqual(multiply.doubleValue, 336.0, "arithmetic is incorrect")
-        XCTAssertEqual(divide.doubleValue, 2.0, "arithmetic is incorrect")
-        XCTAssertEqual(mod.doubleValue, 0, "arithmetic is incorrect")
-        XCTAssertEqual(mod2.doubleValue, 0.5, "arithmetic is incorrect")
-        XCTAssertEqual(negative.doubleValue, -32.0, "arithmetic is incorrect")
-        XCTAssertEqual(plusOne.doubleValue, 33.0, "arithmetic is incorrect")
-        XCTAssertEqual(minusOne.doubleValue, 31.0, "arithmetic is incorrect")
+        XCTAssertEqual(add.doubleValue, 42.5)
+        XCTAssertEqual(minus.doubleValue, 21.5)
+        XCTAssertEqual(multiply.doubleValue, 336.0)
+        XCTAssertEqual(divide.doubleValue, 2.0)
+        XCTAssertEqual(mod.doubleValue, 0)
+        XCTAssertEqual(mod2.doubleValue, 0.5)
+        XCTAssertEqual(negative.doubleValue, -32.0)
+        XCTAssertEqual(plusOne.doubleValue, 33.0)
+        XCTAssertEqual(minusOne.doubleValue, 31.0)
     }
     
     func testBatchAlgebraFunctions() {
@@ -103,12 +103,12 @@ class NSNumberExtensionsTests: XCTestCase {
         let mod = array % 2.0
         let mod2 = array % 10.5
         
-        XCTAssertEqual(add.description, "[6, 10, 18, 130, 258, 514]", "arithmetic is incorrect")
-        XCTAssertEqual(minus.description, "[2, 6, 14, 126, 254, 510]", "arithmetic is incorrect")
-        XCTAssertEqual(multiply.description, "[8, 16, 32, 256, 512, 1024]", "arithmetic is incorrect")
-        XCTAssertEqual(divide.description, "[2, 4, 8, 64, 128, 256]", "arithmetic is incorrect")
-        XCTAssertEqual(mod.description, "[0, 0, 0, 0, 0, 0]", "arithmetic is incorrect")
-        XCTAssertEqual(mod2.description, "[4, 8, 5.5, 2, 4, 8]", "arithmetic is incorrect")
+        XCTAssertEqual(add.description, "[6, 10, 18, 130, 258, 514]")
+        XCTAssertEqual(minus.description, "[2, 6, 14, 126, 254, 510]")
+        XCTAssertEqual(multiply.description, "[8, 16, 32, 256, 512, 1024]")
+        XCTAssertEqual(divide.description, "[2, 4, 8, 64, 128, 256]")
+        XCTAssertEqual(mod.description, "[0, 0, 0, 0, 0, 0]")
+        XCTAssertEqual(mod2.description, "[4, 8, 5.5, 2, 4, 8]")
     }
     
     func testExtendedBatchAlgebraFunctions() {
@@ -141,203 +141,203 @@ class NSNumberExtensionsTests: XCTestCase {
         plusOneArray++
         minusOneArray--
         
-        XCTAssertEqual(addArray.description, "[6, 10, 18, 130, 258, 514]", "arithmetic is incorrect")
-        XCTAssertEqual(minusArray.description, "[2, 6, 14, 126, 254, 510]", "arithmetic is incorrect")
-        XCTAssertEqual(multiplyArray.description, "[8, 16, 32, 256, 512, 1024]", "arithmetic is incorrect")
-        XCTAssertEqual(divideArray.description, "[2, 4, 8, 64, 128, 256]", "arithmetic is incorrect")
-        XCTAssertEqual(modArray.description, "[0, 0, 0, 0, 0, 0]", "arithmetic is incorrect")
-        XCTAssertEqual(mod2Array.description, "[4, 8, 5.5, 2, 4, 8]", "arithmetic is incorrect")
-        XCTAssertEqual(negativeArray.description, "[-4, -8, -16, -128, -256, -512]", "arithmetic is incorrect")
-        XCTAssertEqual(plusOneArray.description, "[5, 9, 17, 129, 257, 513]", "arithmetic is incorrect")
-        XCTAssertEqual(minusOneArray.description, "[3, 7, 15, 127, 255, 511]", "arithmetic is incorrect")
+        XCTAssertEqual(addArray.description, "[6, 10, 18, 130, 258, 514]")
+        XCTAssertEqual(minusArray.description, "[2, 6, 14, 126, 254, 510]")
+        XCTAssertEqual(multiplyArray.description, "[8, 16, 32, 256, 512, 1024]")
+        XCTAssertEqual(divideArray.description, "[2, 4, 8, 64, 128, 256]")
+        XCTAssertEqual(modArray.description, "[0, 0, 0, 0, 0, 0]")
+        XCTAssertEqual(mod2Array.description, "[4, 8, 5.5, 2, 4, 8]")
+        XCTAssertEqual(negativeArray.description, "[-4, -8, -16, -128, -256, -512]")
+        XCTAssertEqual(plusOneArray.description, "[5, 9, 17, 129, 257, 513]")
+        XCTAssertEqual(minusOneArray.description, "[3, 7, 15, 127, 255, 511]")
     }
     
     func testComparisons() {
-        XCTAssertTrue(number_boolean > number_booleanLiteral, "should be true")
-        XCTAssertTrue(number_unsignedChar > number_char, "should be true")
-        XCTAssertTrue(number_unsignedShort > number_short, "should be true")
-        XCTAssertFalse(number_booleanLiteral > number_boolean, "should be false")
-        XCTAssertFalse(number_char > number_unsignedChar, "should be false")
-        XCTAssertFalse(number_short > number_unsignedShort, "should be false")
-        XCTAssertFalse(number_unsignedShort > number_unsignedShort, "should be false")
+        XCTAssertTrue(number_boolean > number_booleanLiteral)
+        XCTAssertTrue(number_unsignedChar > number_char)
+        XCTAssertTrue(number_unsignedShort > number_short)
+        XCTAssertFalse(number_booleanLiteral > number_boolean)
+        XCTAssertFalse(number_char > number_unsignedChar)
+        XCTAssertFalse(number_short > number_unsignedShort)
+        XCTAssertFalse(number_unsignedShort > number_unsignedShort)
         
-        XCTAssertTrue(number_booleanLiteral < number_boolean, "should be true")
-        XCTAssertTrue(number_char < number_unsignedChar, "should be true")
-        XCTAssertTrue(number_short < number_unsignedShort, "should be true")
-        XCTAssertFalse(number_boolean < number_booleanLiteral, "should be false")
-        XCTAssertFalse(number_unsignedChar < number_char, "should be false")
-        XCTAssertFalse(number_unsignedShort < number_short, "should be false")
-        XCTAssertFalse( number_unsignedShort < number_unsignedShort, "should be false")
+        XCTAssertTrue(number_booleanLiteral < number_boolean)
+        XCTAssertTrue(number_char < number_unsignedChar)
+        XCTAssertTrue(number_short < number_unsignedShort)
+        XCTAssertFalse(number_boolean < number_booleanLiteral)
+        XCTAssertFalse(number_unsignedChar < number_char)
+        XCTAssertFalse(number_unsignedShort < number_short)
+        XCTAssertFalse( number_unsignedShort < number_unsignedShort)
         
-        XCTAssertTrue(number_boolean >= number_booleanLiteral, "should be true")
-        XCTAssertTrue(number_unsignedChar >= number_char, "should be true")
-        XCTAssertTrue(number_unsignedShort >= number_short, "should be true")
-        XCTAssertFalse(number_booleanLiteral >= number_boolean, "should be false")
-        XCTAssertFalse(number_char >= number_unsignedChar, "should be false")
-        XCTAssertFalse(number_short >= number_unsignedShort, "should be false")
-        XCTAssertTrue(number_unsignedShort >= number_unsignedShort, "should be true")
+        XCTAssertTrue(number_boolean >= number_booleanLiteral)
+        XCTAssertTrue(number_unsignedChar >= number_char)
+        XCTAssertTrue(number_unsignedShort >= number_short)
+        XCTAssertFalse(number_booleanLiteral >= number_boolean)
+        XCTAssertFalse(number_char >= number_unsignedChar)
+        XCTAssertFalse(number_short >= number_unsignedShort)
+        XCTAssertTrue(number_unsignedShort >= number_unsignedShort)
         
-        XCTAssertTrue(number_booleanLiteral <= number_boolean, "should be true")
-        XCTAssertTrue(number_char <= number_unsignedChar, "should be true")
-        XCTAssertTrue(number_short <= number_unsignedShort, "should be true")
-        XCTAssertFalse(number_boolean <= number_booleanLiteral, "should be false")
-        XCTAssertFalse(number_unsignedChar <= number_char, "should be false")
-        XCTAssertFalse(number_unsignedShort <= number_short, "should be false")
-        XCTAssertTrue(number_unsignedShort <= number_unsignedShort, "should be true")
+        XCTAssertTrue(number_booleanLiteral <= number_boolean)
+        XCTAssertTrue(number_char <= number_unsignedChar)
+        XCTAssertTrue(number_short <= number_unsignedShort)
+        XCTAssertFalse(number_boolean <= number_booleanLiteral)
+        XCTAssertFalse(number_unsignedChar <= number_char)
+        XCTAssertFalse(number_unsignedShort <= number_short)
+        XCTAssertTrue(number_unsignedShort <= number_unsignedShort)
         
-        XCTAssertTrue(number_unsignedShort == number_unsignedShort, "should be true")
-        XCTAssertTrue(number_unsignedShort != number_short, "should be true")
-        XCTAssertFalse(number_unsignedShort == number_short, "should be true")
-        XCTAssertFalse(number_unsignedShort != number_unsignedShort, "should be true")
+        XCTAssertTrue(number_unsignedShort == number_unsignedShort)
+        XCTAssertTrue(number_unsignedShort != number_short)
+        XCTAssertFalse(number_unsignedShort == number_short)
+        XCTAssertFalse(number_unsignedShort != number_unsignedShort)
 
     }
     
     func testBatchComparisons() {
         let array = [NSNumber(int: 1), NSNumber(int: 2), NSNumber(int: 3)]
         
-        XCTAssertTrue(array < 4, "should be true")
-        XCTAssertFalse(array < 3, "should be false")
-        XCTAssertFalse(array < 2, "should be false")
+        XCTAssertTrue(array < 4)
+        XCTAssertFalse(array < 3)
+        XCTAssertFalse(array < 2)
         
-        XCTAssertTrue(array > -1, "should be true")
-        XCTAssertTrue(array > 0, "should be true")
-        XCTAssertFalse(array > 1, "should be false")
-        XCTAssertFalse(array > 2, "should be false")
+        XCTAssertTrue(array > -1)
+        XCTAssertTrue(array > 0)
+        XCTAssertFalse(array > 1)
+        XCTAssertFalse(array > 2)
         
-        XCTAssertTrue(array <= 4, "should be true")
-        XCTAssertTrue(array <= 3, "should be true")
-        XCTAssertFalse(array <= 2, "should be false")
+        XCTAssertTrue(array <= 4)
+        XCTAssertTrue(array <= 3)
+        XCTAssertFalse(array <= 2)
         
-        XCTAssertTrue(array >= -1, "should be true")
-        XCTAssertTrue(array >= 0, "should be true")
-        XCTAssertTrue(array >= 1, "should be true")
-        XCTAssertFalse(array >= 2, "should be false")
+        XCTAssertTrue(array >= -1)
+        XCTAssertTrue(array >= 0)
+        XCTAssertTrue(array >= 1)
+        XCTAssertFalse(array >= 2)
         
         let equalArray = [NSNumber(int: 10), NSNumber(int: 10), NSNumber(int: 10)]
         let notEqualArray = [NSNumber(int: 1), NSNumber(int: 10), NSNumber(int: 10)]
         let notEqualArray2 = [NSNumber(int: 1), NSNumber(int: 2), NSNumber(int: 3)]
 
-        XCTAssertTrue(equalArray == 10, "should be true")
-        XCTAssertFalse(notEqualArray == 10, "should be false")
-        XCTAssertFalse(notEqualArray2 == 10, "should be false")
+        XCTAssertTrue(equalArray == 10)
+        XCTAssertFalse(notEqualArray == 10)
+        XCTAssertFalse(notEqualArray2 == 10)
 
-        XCTAssertFalse(equalArray != 10, "should be false")
-        XCTAssertFalse(notEqualArray != 10, "should be false")
-        XCTAssertTrue(notEqualArray2 != 10, "should be true")
+        XCTAssertFalse(equalArray != 10)
+        XCTAssertFalse(notEqualArray != 10)
+        XCTAssertTrue(notEqualArray2 != 10)
     }
 
     //MARK: class function tests
     func testClassSquarePower() {
         var numbers : [NSNumber] = [2, 4, 6]
         numbers = NSNumber.squarePower(numbers)
-        XCTAssertEqual(numbers[0], 4, "class square power calculation is incorrect")
-        XCTAssertEqual(numbers[1], 16, "class square power calculation is incorrect")
-        XCTAssertEqual(numbers[2], 36, "class square power calculation is incorrect")
+        XCTAssertEqual(numbers[0], 4)
+        XCTAssertEqual(numbers[1], 16)
+        XCTAssertEqual(numbers[2], 36)
     }
     
     func testClassSquareRoot() {
         var numbers : [NSNumber] = [4, 16, 36]
         numbers = NSNumber.squareRoot(numbers)
-        XCTAssertEqual(numbers[0], 2, "class square root calculation is incorrect")
-        XCTAssertEqual(numbers[1], 4, "class square root calculation is incorrect")
-        XCTAssertEqual(numbers[2], 6, "class square root calculation is incorrect")
+        XCTAssertEqual(numbers[0], 2)
+        XCTAssertEqual(numbers[1], 4)
+        XCTAssertEqual(numbers[2], 6)
     }
 
     func testClassSum() {
         let numbers : [NSNumber] = [2, 4, 6.5]
         let sum = NSNumber.sum(numbers)
-        XCTAssertEqual(sum, 12.5, "sum calculation is incorrect")
+        XCTAssertEqual(sum, 12.5)
     }
     
     func testClassAverage() {
         let numbers : [NSNumber] = [2, 4, 6]
         let average = NSNumber.average(numbers)
-        XCTAssertEqual(average, 4, "average calculation is incorrect")
+        XCTAssertEqual(average, 4)
     }
     
     func testClassMaximum() {
         let numbers : [NSNumber] = [2, 4, -6]
         let max = NSNumber.maximum(numbers)
-        XCTAssertEqual(max, 4, "class maximum calculation is incorrect")
+        XCTAssertEqual(max, 4)
     }
     
     func testClassMinimum() {
         let numbers : [NSNumber] = [2, 4, -6]
         let min = NSNumber.minimum(numbers)
-        XCTAssertEqual(min, -6, "class minimum calculation is incorrect")
+        XCTAssertEqual(min, -6)
     }
     
     func testClassLimit() {
         var numbers : [NSNumber] = [2, 4, -6]
         numbers = NSNumber.limit(numbers, minimum: -1, maximum: 3)
-        XCTAssertEqual(numbers.description, "[2, 3, -1]", "class limit calculation is incorrect")
+        XCTAssertEqual(numbers.description, "[2, 3, -1]")
     }
     
     func testClassPowerOf() {
         let numbers : [NSNumber] = [2, 4, 6]
         let pow2 = NSNumber.powerOf(numbers, power: 2)
-        XCTAssertEqual(pow2.description, "[4, 16, 36]", "class power of calculation is incorrect")
+        XCTAssertEqual(pow2.description, "[4, 16, 36]")
         
         let pow3 = NSNumber.powerOf(numbers, power: 3)
-        XCTAssertEqual(pow3.description, "[8, 64, 216]", "class power of calculation is incorrect")
+        XCTAssertEqual(pow3.description, "[8, 64, 216]")
     }
 
     func testClassRootOf() {
         let numbers : [NSNumber] = [100, 4, 36]
         let root2 = NSNumber.rootOf(numbers, root: 2)
-        XCTAssertEqual(root2.description, "[10, 2, 6]", "class power of calculation is incorrect")
+        XCTAssertEqual(root2.description, "[10, 2, 6]")
         
         let root3 = NSNumber.rootOf(numbers, root: 3)
-        XCTAssertEqualWithAccuracy(root3[0].doubleValue, 4.641588833612778, 0.0000001, "root calculation is incorrect")
-        XCTAssertEqualWithAccuracy(root3[1].doubleValue, 1.587401051968199, 0.0000001, "root calculation is incorrect")
-        XCTAssertEqualWithAccuracy(root3[2].doubleValue, 3.301927248894626, 0.0000001, "root calculation is incorrect")
+        XCTAssertEqualWithAccuracy(root3[0].doubleValue, 4.641588833612778, 0.0000001)
+        XCTAssertEqualWithAccuracy(root3[1].doubleValue, 1.587401051968199, 0.0000001)
+        XCTAssertEqualWithAccuracy(root3[2].doubleValue, 3.301927248894626, 0.0000001)
     }
 
     //MARK: instance function tests
     func testSquarePower() {
         var number : NSNumber = 2
         number = number.squarePower
-        XCTAssertEqual(number, 4, "square power calculation is incorrect")
+        XCTAssertEqual(number, 4)
         
         number = number.squarePower
-        XCTAssertEqual(number, 16, "square power calculation is incorrect")
+        XCTAssertEqual(number, 16)
         
         number = number.squarePower
-        XCTAssertEqual(number, 256, "square power calculation is incorrect")
+        XCTAssertEqual(number, 256)
     }
     
     func testSquareRoot() {
         var number : NSNumber = 256
         number = number.squareRoot
-        XCTAssertEqual(number, 16, "square root calculation is incorrect")
+        XCTAssertEqual(number, 16)
         
         number = number.squareRoot
-        XCTAssertEqual(number, 4, "square root calculation is incorrect")
+        XCTAssertEqual(number, 4)
         
         number = number.squareRoot
-        XCTAssertEqual(number, 2, "square root calculation is incorrect")
+        XCTAssertEqual(number, 2)
     }
     
     func testMaximum() {
         let number : NSNumber = 100
-        XCTAssertEqual(number.maximum(50), 100, "maximum calculation is incorrect")
-        XCTAssertEqual(number.maximum(1050), 1050, "maximum calculation is incorrect")
-        XCTAssertEqual(number.maximum(-100), 100, "maximum calculation is incorrect")
+        XCTAssertEqual(number.maximum(50), 100)
+        XCTAssertEqual(number.maximum(1050), 1050)
+        XCTAssertEqual(number.maximum(-100), 100)
     }
     
     func testMinimum() {
         let number : NSNumber = 100
-        XCTAssertEqual(number.minimum(50), 50, "minimum calculation is incorrect")
-        XCTAssertEqual(number.minimum(1050), 100, "minimum calculation is incorrect")
-        XCTAssertEqual(number.minimum(-100), -100, "minimum calculation is incorrect")
+        XCTAssertEqual(number.minimum(50), 50)
+        XCTAssertEqual(number.minimum(1050), 100)
+        XCTAssertEqual(number.minimum(-100), -100)
     }
     
     func testLimit() {
         let number : NSNumber = 100
-        XCTAssertEqual(number.limit(minimum: 0, maximum: 50), 50, "limit calculation is incorrect")
-        XCTAssertEqual(number.limit(minimum: 110, maximum: 1050), 110, "limit calculation is incorrect")
-        XCTAssertEqual(number.limit(minimum: 0, maximum: 150), 100, "limit calculation is incorrect")
-        XCTAssertEqual(number.limit(minimum: -100, maximum: -10), -10, "limit calculation is incorrect")
+        XCTAssertEqual(number.limit(minimum: 0, maximum: 50), 50)
+        XCTAssertEqual(number.limit(minimum: 110, maximum: 1050), 110)
+        XCTAssertEqual(number.limit(minimum: 0, maximum: 150), 100)
+        XCTAssertEqual(number.limit(minimum: -100, maximum: -10), -10)
     }
     
     func testPowerOf() {
@@ -347,9 +347,9 @@ class NSNumberExtensionsTests: XCTestCase {
         let thirdPower = number.powerOf(3)
         let fourthPower = number.powerOf(4)
         
-        XCTAssertEqual(squarePower, 4, "power calculation is incorrect")
-        XCTAssertEqual(thirdPower, 8, "power calculation is incorrect")
-        XCTAssertEqual(fourthPower, 16, "power calculation is incorrect")
+        XCTAssertEqual(squarePower, 4)
+        XCTAssertEqual(thirdPower, 8)
+        XCTAssertEqual(fourthPower, 16)
     }
     
     func testRootOf() {
@@ -359,9 +359,9 @@ class NSNumberExtensionsTests: XCTestCase {
         let thirdRoot = number.rootOf(3)
         let fourthRoot = number.rootOf(4)
         
-        XCTAssertEqualWithAccuracy(squareRoot.doubleValue, 16, 0.0000001, "root calculation is incorrect")
-        XCTAssertEqualWithAccuracy(thirdRoot.doubleValue, 6.34960420787297, 0.0000001, "root calculation is incorrect")
-        XCTAssertEqualWithAccuracy(fourthRoot.doubleValue, 4, 0.0000001, "root calculation is incorrect")
+        XCTAssertEqualWithAccuracy(squareRoot.doubleValue, 16, 0.0000001)
+        XCTAssertEqualWithAccuracy(thirdRoot.doubleValue, 6.34960420787297, 0.0000001)
+        XCTAssertEqualWithAccuracy(fourthRoot.doubleValue, 4, 0.0000001)
     }
     
 }
