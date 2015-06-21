@@ -87,13 +87,6 @@ class NSNumberExtensionsTests: XCTestCase {
     }
     
     func testBatchAlgebraFunctions() {
-        var one = number_double
-        var two = number_float
-        var three = number_floatLiteral
-        var four = number_integerLiteral
-        var five = number_long
-        var six = number_longLong
-        
         let array = [number_double, number_float, number_floatLiteral, number_integerLiteral, number_long, number_longLong]
         
         let add = array + 2.0
@@ -111,15 +104,8 @@ class NSNumberExtensionsTests: XCTestCase {
         XCTAssertEqual(mod2.description, "[4, 8, 5.5, 2, 4, 8]")
     }
     
-    func testExtendedBatchAlgebraFunctions() {
-        var one = number_double
-        var two = number_float
-        var three = number_floatLiteral
-        var four = number_integerLiteral
-        var five = number_long
-        var six = number_longLong
-        
-        var array = [number_double, number_float, number_floatLiteral, number_integerLiteral, number_long, number_longLong]
+    func testExtendedBatchAlgebraFunctions() {        
+        let array = [number_double, number_float, number_floatLiteral, number_integerLiteral, number_long, number_longLong]
         var addArray = array
         var minusArray = array
         var multiplyArray = array
@@ -134,7 +120,7 @@ class NSNumberExtensionsTests: XCTestCase {
         modArray %= 2.0
         mod2Array %= 10.5
         
-        var negativeArray = -array
+        let negativeArray = -array
         var plusOneArray = array
         var minusOneArray = array
 
@@ -288,9 +274,9 @@ class NSNumberExtensionsTests: XCTestCase {
         XCTAssertEqual(root2.description, "[10, 2, 6]")
         
         let root3 = NSNumber.rootOf(numbers, root: 3)
-        XCTAssertEqualWithAccuracy(root3[0].doubleValue, 4.641588833612778, 0.0000001)
-        XCTAssertEqualWithAccuracy(root3[1].doubleValue, 1.587401051968199, 0.0000001)
-        XCTAssertEqualWithAccuracy(root3[2].doubleValue, 3.301927248894626, 0.0000001)
+        XCTAssertEqualWithAccuracy(root3[0].doubleValue, 4.641588833612778, accuracy: 0.0000001)
+        XCTAssertEqualWithAccuracy(root3[1].doubleValue, 1.587401051968199, accuracy: 0.0000001)
+        XCTAssertEqualWithAccuracy(root3[2].doubleValue, 3.301927248894626, accuracy: 0.0000001)
     }
 
     //MARK: instance function tests
@@ -359,9 +345,9 @@ class NSNumberExtensionsTests: XCTestCase {
         let thirdRoot = number.rootOf(3)
         let fourthRoot = number.rootOf(4)
         
-        XCTAssertEqualWithAccuracy(squareRoot.doubleValue, 16, 0.0000001)
-        XCTAssertEqualWithAccuracy(thirdRoot.doubleValue, 6.34960420787297, 0.0000001)
-        XCTAssertEqualWithAccuracy(fourthRoot.doubleValue, 4, 0.0000001)
+        XCTAssertEqualWithAccuracy(squareRoot.doubleValue, 16, accuracy: 0.0000001)
+        XCTAssertEqualWithAccuracy(thirdRoot.doubleValue, 6.34960420787297, accuracy: 0.0000001)
+        XCTAssertEqualWithAccuracy(fourthRoot.doubleValue, 4, accuracy: 0.0000001)
     }
     
 }

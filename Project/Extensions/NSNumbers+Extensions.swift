@@ -146,9 +146,9 @@ public func >= (left:NSNumber, right:NSNumber) -> Bool {
     return result == NSComparisonResult.OrderedDescending || result == NSComparisonResult.OrderedSame
 }
 
-public func == (left:NSNumber, right:NSNumber) -> Bool {
-    return left.hashValue == right.hashValue
-}
+//public func == (left:NSNumber, right:NSNumber) -> Bool {
+//    return left.hashValue == right.hashValue
+//}
 
 //MARK: - batch comparisons
 func < (left:[NSNumber], right:NSNumber) -> Bool {
@@ -191,15 +191,15 @@ func != (left:[NSNumber], right:NSNumber) -> Bool {
 private let booleanNumber : NSNumber = true
 
 //MARK: - class extensions
-extension NSNumber : Comparable, Equatable {
+extension NSNumber : Comparable {
     
     //MARK: - class functions
     /**
     Applies a square power (or power of 2) to the values in an array of `NSNumbers`.
     
-    :param: numbers An array of `NSNumbers` to calculate from.
+    - parameter numbers: An array of `NSNumbers` to calculate from.
     
-    :returns: A new array equivalent to the input array `numbers` where the value of all its `NSNumber` objects have been altered by the calculation.
+    - returns: A new array equivalent to the input array `numbers` where the value of all its `NSNumber` objects have been altered by the calculation.
     */
     class func squarePower(numbers: [NSNumber]) -> [NSNumber] {
         return batchModifyNumbers(numbers) { (number) -> NSNumber in number.squarePower }
@@ -208,9 +208,9 @@ extension NSNumber : Comparable, Equatable {
     /**
     Applies a square root to the values in an array of `NSNumbers`.
     
-    :param: numbers An array of `NSNumbers` to calculate from.
+    - parameter numbers: An array of `NSNumbers` to calculate from.
     
-    :returns: A new array equivalent to the input array `numbers` where the value of all its `NSNumber` objects have been altered by the calculation.
+    - returns: A new array equivalent to the input array `numbers` where the value of all its `NSNumber` objects have been altered by the calculation.
     */
     class func squareRoot(numbers: [NSNumber]) -> [NSNumber] {
         return batchModifyNumbers(numbers) { (number) -> NSNumber in number.squareRoot }
@@ -219,9 +219,9 @@ extension NSNumber : Comparable, Equatable {
     /**
     Calculates the total sum of an array of `NSNumbers`
     
-    :param: numbers An array of `NSNumbers` to calculate a sum from.
+    - parameter numbers: An array of `NSNumbers` to calculate a sum from.
     
-    :returns: a `NSNumber` with a value equivalent to the sum of `numbers`
+    - returns: a `NSNumber` with a value equivalent to the sum of `numbers`
     */
     class func sum(numbers: [NSNumber]) -> NSNumber {
         var total : NSNumber = 0
@@ -234,9 +234,9 @@ extension NSNumber : Comparable, Equatable {
     /**
     Calculates the average value of an array of `NSNumbers`
     
-    :param: numbers An array of `NSNumbers` to calculate an average from.
+    - parameter numbers: An array of `NSNumbers` to calculate an average from.
     
-    :returns: a `NSNumber` with a value equivalent to the average of `numbers`
+    - returns: a `NSNumber` with a value equivalent to the average of `numbers`
     */
     class func average(numbers: [NSNumber]) -> NSNumber {
         return NSNumber(double: sum(numbers).doubleValue/Double(numbers.count))
@@ -245,9 +245,9 @@ extension NSNumber : Comparable, Equatable {
     /**
     Iterates through an array of `NSNumbers`, and returns the object with the greatest value.
     
-    :param: numbers An array of `NSNumbers` to compare.
+    - parameter numbers: An array of `NSNumbers` to compare.
     
-    :returns: The `NSNumber` with the highest value in `numbers`.
+    - returns: The `NSNumber` with the highest value in `numbers`.
     */
     class func maximum(numbers: [NSNumber]) -> NSNumber {
         var maximum : NSNumber = 0
@@ -260,9 +260,9 @@ extension NSNumber : Comparable, Equatable {
     /**
     Iterates through an array of `NSNumbers`, and returns the object with the least value.
 
-    :param: numbers An array of `NSNumbers` to compare.
+    - parameter numbers: An array of `NSNumbers` to compare.
     
-    :returns: The `NSNumber` with the lowest value of `numbers`.
+    - returns: The `NSNumber` with the lowest value of `numbers`.
     */
     class func minimum(numbers: [NSNumber]) -> NSNumber {
         var minimum : NSNumber = DBL_MAX
@@ -275,11 +275,11 @@ extension NSNumber : Comparable, Equatable {
     /**
     Checks all values in an array of `NSNumbers`, making sure that they are within the lower and upper bounds specified by `minimum` and `maximum`. If the original number is within the bounds, where the values of `minimum` and `maximum` are inclusive, then the object's value remains unaltered. If the original number is outside of the bounds, then the value of the number is set to the upper or lower bound, depending on which is closest.
     
-    :param: numbers An array of `NSNumbers` to check.
-    :param: minimum The minimum value accepted for the returned numbers.
-    :param: maximum The maximum value accepted for the returned numbers.
+    - parameter numbers: An array of `NSNumbers` to check.
+    - parameter minimum: The minimum value accepted for the returned numbers.
+    - parameter maximum: The maximum value accepted for the returned numbers.
     
-    :returns: A new array equivalent to the input array `numbers` where the value of all its `NSNumber` objects have been checked by the calculation.
+    - returns: A new array equivalent to the input array `numbers` where the value of all its `NSNumber` objects have been checked by the calculation.
     
     :warning: If the value of `minimum` is not less than or equal to `maximum` this method will throw an assertion failure.
     */
@@ -290,10 +290,10 @@ extension NSNumber : Comparable, Equatable {
     /**
     Applies the "power of" a `NSNumber`, specified by `power`, to the values contained in an array of `NSNumbers`.
     
-    :param: numbers An array of `NSNumbers` to calculate from.
-    :param: power   The "power of" value, as a `NSNumber`, to apply to `numbers`.
+    - parameter numbers: An array of `NSNumbers` to calculate from.
+    - parameter power:   The "power of" value, as a `NSNumber`, to apply to `numbers`.
     
-    :returns: A new array equivalent to the input array `numbers` where the value of all its `NSNumber` objects have been altered by the calculation.
+    - returns: A new array equivalent to the input array `numbers` where the value of all its `NSNumber` objects have been altered by the calculation.
     */
     class func powerOf(numbers: [NSNumber], power : NSNumber) -> [NSNumber] {
         return batchModifyNumbers(numbers) { (number) -> NSNumber in number.powerOf(power) }
@@ -302,10 +302,10 @@ extension NSNumber : Comparable, Equatable {
     /**
     Applies the "root of" (or inverse power of) a `NSNumber`, specified by `root`, to the values contained in an array of `NSNumbers`.
     
-    :param: numbers An array of `NSNumbers` to calculate from.
-    :param: root    The "root of" value, as a `NSNumber`, to apply to `numbers`.
+    - parameter numbers: An array of `NSNumbers` to calculate from.
+    - parameter root:    The "root of" value, as a `NSNumber`, to apply to `numbers`.
 
-    :returns: A new array equivalent to the input array `numbers` where the value of all its `NSNumber` objects have been altered by the calculation.
+    - returns: A new array equivalent to the input array `numbers` where the value of all its `NSNumber` objects have been altered by the calculation.
     */
     class func rootOf(numbers: [NSNumber], root : NSNumber) -> [NSNumber] {
         return batchModifyNumbers(numbers) { (number) -> NSNumber in number.rootOf(root) }
@@ -327,9 +327,9 @@ extension NSNumber : Comparable, Equatable {
     /**
     Creates a new `NSNumber` with the greater value compared between two `NSNumbers`.
     
-    :param: number A `NSNumber` to compare the calling object's value against.
+    - parameter number: A `NSNumber` to compare the calling object's value against.
     
-    :returns: A new instance of `NSNumber` with the result value of this comparison.
+    - returns: A new instance of `NSNumber` with the result value of this comparison.
     */
     func maximum(number : NSNumber) -> NSNumber {
         let value = max(number.doubleValue, self.doubleValue)
@@ -339,9 +339,9 @@ extension NSNumber : Comparable, Equatable {
     /**
     Creates a new `NSNumber` with the lesser value compared between two `NSNumbers`.
     
-    :param: number A `NSNumber` to compare the calling object's value against.
+    - parameter number: A `NSNumber` to compare the calling object's value against.
     
-    :returns: A new instance of `NSNumber` with the result value of this comparison.
+    - returns: A new instance of `NSNumber` with the result value of this comparison.
     */
     func minimum(number : NSNumber) -> NSNumber {
         let value = min(number.doubleValue, self.doubleValue)
@@ -351,14 +351,14 @@ extension NSNumber : Comparable, Equatable {
     /**
     Limits the value of a `NSNumber` to the specified `minimum` and `maximum` bounds. If the original number is within the bounds, where the values of `minimum` and `maximum` are inclusive, then the return object's value remains unaltered. If the original number is outside of the bounds, then the value of the number is set to the upper or lower bound, depending on which is closest.
     
-    :param: minimum The minimum value accepted for the returned number.
-    :param: maximum The maximum value accepted for the returned number.
+    - parameter minimum: The minimum value accepted for the returned number.
+    - parameter maximum: The maximum value accepted for the returned number.
     
-    :returns: A new instance of `NSNumber` with the result value of this calculation.
+    - returns: A new instance of `NSNumber` with the result value of this calculation.
     
     :warning: If the value of `minimum` is not less than or equal to `maximum` this method will throw an assertion failure.
     */
-    func limit(#minimum : NSNumber, maximum : NSNumber) -> NSNumber {
+    func limit(minimum minimum : NSNumber, maximum : NSNumber) -> NSNumber {
         assert(minimum <= maximum, "minimum in limit calculation cannot be greater than maximum")
         var value = max(minimum.doubleValue, self.doubleValue)
         value = min(value, maximum.doubleValue)
@@ -368,9 +368,9 @@ extension NSNumber : Comparable, Equatable {
     /**
     Creates a new `NSNumber` object by applying the root (or inverse power) of `number`.
 
-    :param: number The "power of" value, as a `NSNumber`, to apply to the current value of the calling object.
+    - parameter number: The "power of" value, as a `NSNumber`, to apply to the current value of the calling object.
     
-    :returns: A new instance of `NSNumber` with the result value of this calculation.
+    - returns: A new instance of `NSNumber` with the result value of this calculation.
     */
     func powerOf(number : NSNumber) -> NSNumber {
         return NSNumber(double:pow(self.doubleValue, number.doubleValue))
@@ -379,9 +379,9 @@ extension NSNumber : Comparable, Equatable {
     /**
     Creates a new `NSNumber` object by applying the root (or inverse power) of `number`.
     
-    :param: number The "root of" value, as a `NSNumber`, to apply to the current value of the calling object.
+    - parameter number: The "root of" value, as a `NSNumber`, to apply to the current value of the calling object.
     
-    :returns: A new instance of `NSNumber` with the result value of this calculation.
+    - returns: A new instance of `NSNumber` with the result value of this calculation.
     */
     func rootOf(number : NSNumber) -> NSNumber {
         return NSNumber(double:pow(self.doubleValue, 1/number.doubleValue))
