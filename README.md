@@ -214,8 +214,8 @@ let num8 = num1.powerOf(2) // 100
 let num9 = num8.rootOf(2) // 10
 ```
 
-This class serves as an extension to the tutorial of the blog article: ["Smarter Numbers"](http://epic-apps.uk/2015/05/04/smarter-numbers/).
-Usage is free for all based on the attached license details, if you find this code useful, please consider [making a donation](http://epic-apps.uk/donations/). :)
+This project serves as an extension to the tutorial of the blog article: ["Smarter Numbers"](http://epic-apps.uk/2015/05/04/smarter-numbers/).
+Usage is free for all based on the attached license details, if you find this code useful, please consider [letting me know](helloworld@epic-apps.uk)! :)
 
 Copyright (c) EPIC 
 [www.epic-apps.uk](www.epic-apps.uk)
